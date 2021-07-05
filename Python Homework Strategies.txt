@@ -1,0 +1,18 @@
+Python Homework Strategies
+PyBank
+•	For loop through CSV
+•	Variable ‘totalMonths’, which counts the total months in the CSV.
+•	Variable ‘total’, which simply subtracts the final row Profit/Loss from the first row’s Profit/Loss
+•	Variable ‘avgChange’, which is the quotient of total/totalMonths
+•	Variable ‘greatestIncrease’, which is checked every iteration of the loop to check if a month’s change in profit is greater than the previously recorded ‘greatestIncrease’ 
+•	Variable ‘greatestIncreaseMonth’, which records the month ‘greatestIncrease’ took place.
+•	Variables ‘greatestDecrease’ and ‘greatestDecreaseMonth’, which do the same as their ‘greatestIncrease’ counterparts, but for the greatest decrease in loss. 
+PyPoll
+•	For loop for CSV
+•	Variable ‘totalVotes’, which simply counts how many rows are in the CSV
+•	Variables for vote counts for candidates, named ‘votesKhan’, ‘votesCorrey’, etc... These counts are initialized to 0
+•	Variables for vote percentage, named ‘percentKhan’, ‘percentCorrey’, etc... These will be calculated after the for loop is finished
+•	In each iteration of the for loop, nested If statements to determine which candidate has been voted for
+•	Following the for loop, calculate values to be assigned to ‘percent’ variables. E.g. ‘percentKhan’ = ‘votesKhan’/’totalVotes’
+•	If statements to calculate who has the most votes 
+o	E.g. If Khan > Correy && Khan > Li && Khan > O’Tooley -> Khan = winner
