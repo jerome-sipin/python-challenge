@@ -16,25 +16,29 @@ with open(budgetData) as csvfile:
     
     budgetReader = csv.reader(csvfile, delimiter=",")
 
+    next(budgetReader)
+
     for row in budgetReader:
 
         totalMonths += 1
         total = total + int(row[1])
 
-        if greatestIncrease < row[1]:
+        if greatestIncrease < int(row[1]):
 
-            greatestIncrease = row[1]
+            greatestIncrease = int(row[1])
             greatestIncreaseMonth = row[0]
 
-        if row[1] < greatestDecrease & row[1] <= 0:
+        if int(row[1]) < greatestDecrease and int(row[1]) <= 0:
 
-            greatestDecrease = row[1]
+            greatestDecrease = int(row[1])
             greatestDecreaseMonth = row[0]
 
-avgChange = total/totalMonths
+avgChange = (total)/(totalMonths)
 
-print(f'{totalMonths}')
-print(f'{total}')
-print(f'{avgChange}')
-print(f'{greatestIncrease} {greatestIncreaseMonth}')
-print(f'{greatestDecrease} {greatestDecreaseMonth}')
+print(f'Financial Analysis')
+print(f'------------------------------------------')
+print(f'Total Months: {totalMonths}')
+print(f'Total: ${total}')
+print(f'Average Change: ${avgChange}')
+print(f'Greatest Increase in profits: ${greatestIncrease}, on {greatestIncreaseMonth}')
+print(f'Greatest Decrease in profits: ${greatestDecrease}, on {greatestDecreaseMonth}')
